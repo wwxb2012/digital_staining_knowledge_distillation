@@ -65,7 +65,7 @@ python evaluation/cal_P.py
 
 # Training
 
-The pretrained colorization models can be found in the ./Model/colorization directory.
+The pretrained colorization models can download from [Google Drive](https://drive.google.com/drive/folders/1YjW-V3Cervsaa_ttZ06B3n_by2EJVd-B?usp=sharing), then put them into `./Model/colorization` directory.
 
 For training on DSD_P dataset, you can execute 
 
