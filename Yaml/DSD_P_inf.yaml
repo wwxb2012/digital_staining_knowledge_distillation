@@ -1,0 +1,36 @@
+#####
+name: CycleGan
+bidirect: True #Unidirectional or bidirectional
+regist: True    # With or without registration network
+
+noise_level: 1  #  noise level
+port: 6019   #  port parameters
+save_root: './output/DSD_P/'
+image_save: './output/DSD_P/img_inf/'
+
+# lamda weight
+Adv_lamda: 1
+Cyc_lamda: 10
+Corr_lamda: 20
+Smooth_lamda: 10
+distillation: 2
+
+epoch_to_test: 300
+epoch: 0        # Starting epoch,0 means new training
+n_epochs: 300     # Ending epoch
+batchSize: 1               # size of the batches
+dataroot: './data/DSD_P/train'     # root directory of the dataset
+val_dataroot: './data/DSD_P/val'
+lr: 0.0001                   # initial learning rate
+decay_epoch: 20            # epoch to start linearly decaying the learning rate to 0
+size: 256                # size of the data crop
+input_nc: 4         
+output_nc: 3                  
+cuda: True                
+n_cpu: 12
+
+
+use_iedf: True
+half_cycle: True
+teacher_model_location: './Model/colorization/DSD_P_colorization.pth'
+inf_model_path: './Model/trained/DSD_P.pth'
